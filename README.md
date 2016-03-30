@@ -4,6 +4,8 @@ This is a widget for the [Alloy](http://projects.appcelerator.com/alloy/docs/All
 
 It provides an interface for using oAuth based authentication with Microsoft Azure Active Directory oAuth Login. To find out more about leveraging Microsoft Azure Active Directory Authentication, check out the [Azure oAuth Documentation](https://msdn.microsoft.com/en-us/library/azure/dn645545.aspx).
 
+> Note: This widget assumes you have the correct configuration for Microsoft Azure and your app, and that an appropriate redirect URL is setup.
+
 ## Usage [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/co.grantges.azure.adal)
 
 1. Install [this widget](http://gitt.io/component/co.grantges.azure.adal) via [gitTio](http://gitt.io):
@@ -12,7 +14,7 @@ It provides an interface for using oAuth based authentication with Microsoft Azu
 
 4. In your `app/views/index.js` use it like this:
 
-	```	
+	```
 /**
  * Provide your specific Azure specific information
  */
