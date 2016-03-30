@@ -1,3 +1,7 @@
 # Build folder and log file
 build/
 build.log
+Resources/
+.DS_Store
+modules/
+
