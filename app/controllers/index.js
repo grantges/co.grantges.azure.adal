@@ -7,7 +7,7 @@
  */
 var clientId = 'YOUR_AZURE_CLIENT_ID',
     clientSecret = 'YOUR_AZURE_SECRET_KEY',
-    tenant='YOUR_AZURE_TENANT_ID',
+    tenant ='YOUR_AZURE_TENANT_ID',
     resource = 'YOUR_AZURE_RESOURCE_ID';
 
 /**
