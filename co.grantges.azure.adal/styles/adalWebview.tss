@@ -1,0 +1,23 @@
+
+".container":{
+  layout: "vertical"
+}
+
+".header":{
+  height: 65,
+  width: Ti.UI.FILL,
+  backgroundColor: "#E31B23"
+}
+
+"#title":{
+  font:{
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  color: "#fff"
+}
+
+"#closeBtn":{ 
+  right: 20,
+  color: "#fff"
+}

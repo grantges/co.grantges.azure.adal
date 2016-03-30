@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id="win" class="container">
+		<View class="header">
+			<Label id="title" text="Login" />
+			<Button id="closeBtn" onClick="_onClickCloseButton" title="Close" />
+		</View>
+		<WebView id="webview" />
+	</Window>
+</Alloy>
