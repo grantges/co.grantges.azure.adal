@@ -1,83 +1,46 @@
-# Alloy Azure ADAL Authorization Widget [![Appcelerator Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://appcelerator.com/titanium/) [![Appcelerator Alloy](http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png)](http://appcelerator.com/alloy/)
+# Alloy Azure ADAL Authorization Widget - Tests
 
-This is a widget for the [Alloy](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html) MVC framework of [Appcelerator](http://www.appcelerator.com)'s [Titanium](http://www.appcelerator.com/platform) platform.
+This is the test branch for the [Alloy](http://appcelerator.com/alloy) [Azure ADAL Widget](https://github.com/grantges/co.grantges.azure.adal/tree/master).
 
-It provides an interface for using oAuth based authentication with Microsoft Azure Active Directory oAuth Login. To find out more about leveraging Microsoft Azure Active Directory Authentication, check out the [Azure oAuth Documentation](https://msdn.microsoft.com/en-us/library/azure/dn645545.aspx).
+* Source code: [https://github.com/grantges/co.grantges.azure.adal/tree/master](https://github.com/grantges/co.grantges.azure.adal/tree/master)
+* Test app: [https://github.com/grantges/co.grantges.azure.adal/tree/test](https://github.com/grantges/co.grantges.azure.adal/tree/test)
 
-## Usage [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/co.grantges.azure.adal)
+## Preparing [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-1. Install [this widget](http://gitt.io/component/co.grantges.azure.adal) via [gitTio](http://gitt.io):
+The repo has a `Gruntfile.js` for [Grunt](http://gruntjs.com/getting-started) to replace the app's `app/widgets/co.grantges.azure.adal` with a copy from the `master` branch. The configuration assumes to find a working copy with this branch at `../master`.
 
-	`gittio install co.grantges.azure.adal`
+Install Grunt and the dependencies via:
 
-4. In your `app/views/index.js` use it like this:
+	$ sudo npm i -g grunt
+	$ sudo npm install
 
-	```	
-/**
- * Provide your specific Azure specific information
- */
-var clientId = 'YOUR_AZURE_CLIENT_ID',
-    clientSecret = 'YOUR_AZURE_CLIENT_SECRET=',
-    tenant='YOUR_AZURE_TENANT_GUID',    //<-- optional
-    resource = 'AZURE_AD_RESOURCE_ID';
+## Running
+To replace the app's copy of the widget with a fresh copy of master and build the app for the simulator simply execute:
 
-/**
- * Create the widget
- */
-var adalWidget = Alloy.createWidget('co.grantges.azure.adal');
-
-/**
- * Setup the widget properties (could also be done as an object on the `createWidget` command)
- */
-adalWidget.clientId = clientId;
-adalWidget.clientSecret = clientSecret;
-adalWidget.tenant = tenant;
-adalWidget.resourceId = resource;
-
-/**
- * Define your callbacks
- */
-adalWidget.success = function(e){
-  Ti.API.info('Azure Login and Token Retrieval was a success');
-  console.log(JSON.stringify(e));
-
-  /**
-   * Close the widget
-   */
-   adalWidget.close();
-}
-adalWidget.error = function(e){
-  Ti.API.info('Azure Login and Token Retrieval had an issue, try again');
-  console.log(JSON.stringify(e));
-}
-
-/**
- * To use the widget, just call the `authorize` function.
- */
-adalWidget.authorize();
-	```
-
-## The repository
-The repository contains two branches. This master branch contains the widget. The other [test](https://github.com/grantges/co.grantges.azure.adal/tree/test) branch has a complete Titanium Alloy demo/test project.
-
-## Changelog
-
-- 1.0.1: Initial release.
+	$ grunt
+	
+There are also tasks to build for Android (`grunt android`) or to just update the widget from master (`grunt update`).
 
 ## License
 
-<pre>
-Copyright 2014-2015 Bert Grantges
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-</pre>
+	The MIT License (MIT)
+	
+	Copyright (c) 2015 Fokke Zandbergen
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
