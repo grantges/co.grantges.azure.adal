@@ -67,7 +67,7 @@ The repository contains two branches. This master branch contains the widget. Th
 ## License
 
 <pre>
-Copyright 2014-2015 Bert Grantges
+Copyright 2016 Bert Grantges
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
