@@ -3,7 +3,7 @@
 	"name": "co.grantges.azure.adal",
 	"description" : "This widget provides an interface for using oAuth based authentication with Microsoft Azure",
 	"author": "Bert Grantges",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"copyright":"Copyright (c) 2016",
 	"license":"Apache License, Version 2.0",
 	"min-alloy-version": "1.3",
