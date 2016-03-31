@@ -17,7 +17,7 @@ var _clientId,     // <-- GUID supplied by Azure
     _azureAdalTokenUrl='https://login.microsoftonline.com/oauth2/token';
 
 // A handle to the WebView component of the widget.
-var _adalWebView = Alloy.createWidget('com.appcelerator.azure.adal', 'adalWebview');
+var _adalWebView = Alloy.createWidget('co.grantges.azure.adal', 'adalWebview');
 
 /**
  * Constructor for the Appcelerator Azure ADAL widget
@@ -39,7 +39,7 @@ var _adalWebView = Alloy.createWidget('com.appcelerator.azure.adal', 'adalWebvie
           _onSuccess = _params.onSuccess
       }
       else {
-        Ti.API.error('WIDGET[com.appcelerator.azure.adal] Error creating widget, onSuccess property must be a function.');
+        Ti.API.error('WIDGET[co.grantges.azure.adal] Error creating widget, onSuccess property must be a function.');
       }
   }
 
@@ -48,7 +48,7 @@ var _adalWebView = Alloy.createWidget('com.appcelerator.azure.adal', 'adalWebvie
           _onSuccess = _params.onError
       }
       else {
-        Ti.API.error('WIDGET[com.appcelerator.azure.adal] Error creating widget, onError property must be a function.');
+        Ti.API.error('WIDGET[co.grantges.azure.adal] Error creating widget, onError property must be a function.');
       }
   }
 
@@ -129,11 +129,11 @@ function _getUserAuthorization(callback){
         /**
          * Ooops! We hit a roadbloack, make sure your configured right with Azure.
          */
-        Ti.API.info('WIDGET[com.appcelerator.azure.adal] Authorization Error');
+        Ti.API.info('WIDGET[co.grantges.azure.adal] Authorization Error');
         callback && callback(err);
       }
       else {
-        Ti.API.info('WIDGET[com.appcelerator.azure.adal] Authorization Successful');
+        Ti.API.info('WIDGET[co.grantges.azure.adal] Authorization Successful');
         callback && callback(null, result);
       }
 
@@ -251,7 +251,7 @@ Object.defineProperty($, 'success',{
         _onSuccess = func
     }
     else {
-      Ti.API.error('WIDGET[com.appcelerator.azure.adal] Error setting property - onSuccess must be a function.');
+      Ti.API.error('WIDGET[co.grantges.azure.adal] Error setting property - onSuccess must be a function.');
     }
   }
 });
@@ -268,7 +268,7 @@ Object.defineProperty($, 'error',{
         _onError = func
     }
     else {
-      Ti.API.error('WIDGET[com.appcelerator.azure.adal] Error setting property - onError must be a function.');
+      Ti.API.error('WIDGET[co.grantges.azure.adal] Error setting property - onError must be a function.');
     }
   }
 });

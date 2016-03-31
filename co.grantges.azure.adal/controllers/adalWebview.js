@@ -75,7 +75,7 @@ exports.close = _close;
  */
 function _onClickCloseButton(e){ 
   _close();
-  _callback && _callback(new Error('com.appcelerator.azure.adal::USER_EXIT - User initiated close of dialog', 'adalWebview.js', 78));
+  _callback && _callback(new Error('co.grantges.azure.adal::USER_EXIT - User initiated close of dialog', 'adalWebview.js', 78));
 }
 
 /**
