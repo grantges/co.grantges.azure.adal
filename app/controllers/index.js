@@ -13,7 +13,7 @@ var clientId = 'YOUR_AZURE_CLIENT_ID',
 /**
  * Create the widget
  */
-var adalWidget = Alloy.createWidget('com.appcelerator.azure.adal');
+var adalWidget = Alloy.createWidget('co.grantges.azure.adal');
 
 /**
  * Setup the widget properties (could also be done as an object on the `createWidget` command)
