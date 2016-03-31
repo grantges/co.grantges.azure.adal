@@ -9,6 +9,6 @@
     "os:mobileweb": {},
     "os:windows": {},
     "dependencies": {
-        "com.appcelerator.azure.adal": "1.0"
+        "co.grantges.azure.adal": "1.0.1"
     }
 }
