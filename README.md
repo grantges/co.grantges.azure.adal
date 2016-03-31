@@ -64,6 +64,7 @@ The repository contains two branches. This master branch contains the widget. Th
 
 ## Changelog
 
+- 1.0.2: Fixed bad widget name references
 - 1.0.1: Initial release.
 
 ## License
