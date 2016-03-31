@@ -1,6 +1,6 @@
 {
-	"id": "com.grantges.azure.adal",
-	"name": "com.grantges.azure.adal",
+	"id": "co.grantges.azure.adal",
+	"name": "co.grantges.azure.adal",
 	"description" : "This widget provides an interface for using oAuth based authentication with Microsoft Azure",
 	"author": "Bert Grantges",
 	"version": "1.0.2",
